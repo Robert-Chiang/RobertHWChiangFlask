@@ -2,9 +2,8 @@
 *.swp
 *.sqlite*
 
-# Unit test / coverage reports
-.coverage
-.tox
-
 # Mac Finder
 *.DS_Store
+
+# vscode
+.vscode/*
