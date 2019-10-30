@@ -8,6 +8,8 @@
         <title>{% block title %}Robert Hung-Wei Chiang{% endblock title %}</title>
 
         <link href="{{ url_for('static', filename='css/lib/bootstrap/bootstrap.min.css') }}" rel="stylesheet">
+
+        {% block css %}{% endblock css %}
     </head>
     <body>
         {# header #}
@@ -31,6 +33,9 @@
                 </ul>
             </div>
         </nav>
+
+        {# for homepage #}
+        {% block jumbotron %}{% endblock jumbotron %}
 
         <script src="{{ url_for('static', filename='js/lib/jquery.min.js') }}"></script>
         <script src="{{ url_for('static', filename='js/lib/popper.min.js') }}"></script>

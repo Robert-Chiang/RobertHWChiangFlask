@@ -1,1 +1,18 @@
 {% extends "base.html" %}
+
+{% block css %}
+    <link href="{{ url_for('static', filename='css/home.css') }}" rel="stylesheet">
+{% endblock css %}
+
+{% block jumbotron %}
+  <div class="jumbotron">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-7">
+                  <h1>Hello</h1>
+                  <p>Welcome to my website :)</p>
+              </div>
+          </div> {# row #}
+      </div> {# container #}
+  </div> <{# jumbotron #}
+{% endblock jumbotron %}
