@@ -38,6 +38,10 @@
         {# for homepage #}
         {% block jumbotron %}{% endblock jumbotron %}
 
+        <div class="container" id="main_content">
+            {% block content %}{% endblock content %}
+        </div>
+
         <script src="{{ url_for('static', filename='js/lib/jquery.min.js') }}"></script>
         <script src="{{ url_for('static', filename='js/lib/popper.min.js') }}"></script>
         <script src="{{ url_for('static', filename='js/lib/bootstrap/bootstrap.min.js') }}"></script>

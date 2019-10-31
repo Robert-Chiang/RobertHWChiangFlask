@@ -1,1 +1,41 @@
 {% extends "base.html" %}
+
+{% block css %}
+    <link href="{{ url_for('static', filename='css/about.css') }}" rel="stylesheet">
+{% endblock css %}
+
+{% block js %}
+    <script src="{{ url_for('static', filename='js/about.js') }}"></script>
+{% endblock js %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-heading">
+                    <img src="{{ url_for('static', filename='img/about/flask-logo.png') }}">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">About This Site</h5>
+                    <p class="card-text">Wrote by <a href="http://flask.palletsprojects.com/en/1.1.x/" target="_blank">Flask</a></p>
+                    <p class="card-text">Host on <a href="https://www.heroku.com/" target="_blank">Heroku</a></p>
+                    <p class="card-text">Find source code on <a href="https://github.com/CutestPiglet/RobertHWChiangFlask" target="_blank">GitHub repository</a></p>
+                </div> {# card-body #}
+            </div> {# card #}
+        </div> {# col-md #}
+
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-heading">
+                    <img src="{{ url_for('static', filename='img/about/me.jpg') }}">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">About Me</h5>
+                    <p class="card-text">Email: <a href="mailto:johnmay0629@gmail.com">johnmay0629@gmail.com</a></p>
+                    <p class="card-text">Flickr: <a href="https://www.flickr.com/photos/johnmay0629">https://www.flickr.com/photos/johnmay0629</a></p>
+                    <p class="card-text">Youtube: <a href="https://www.youtube.com/user/johnmay0629">https://www.youtube.com/user/johnmay0629</a></p>
+                </div> {# card-body #}
+            </div> {# card #}
+        </div> {# col-md #}
+    </div> {# row #}
+{% endblock content %}
