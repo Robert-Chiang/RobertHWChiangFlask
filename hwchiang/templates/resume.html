@@ -1,1 +1,276 @@
 {% extends "base.html" %}
+
+{% block css %}
+    <link href="{{ url_for('static', filename='css/resume.css') }}" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+{% endblock css %}
+
+{% block js %}
+    <script src="{{ url_for('static',  filename='js/resume.js') }}"></script>
+{% endblock js %}
+
+{% block content %}
+    {# work experience #}
+    <fieldset>
+        <legend>Work Experience</legend>
+        <div class="row">
+            <div class="col-md-4 period">
+                <h4>StreetVoice</h4>
+                <p>Jul. 2017 – Present</p>
+            </div>
+            <div class="col-md-8 work_content">
+                <h4>Full-Time Software Engineer</h4>
+                <p>Developed and maintained the digital music distribution and publishing service website <a href="https://packer.streetvoice.com/" target="_blank">"Packer"</a> which is wrote by Django</p>
+                <p>Developed web crawler website using Scrapy, Crawlera, Django and Selenium</p>
+                <p>Backend development in Python, Django, Scrapy, MySQL, Celery and Elasticsearch</p>
+                <p>Tuned performance of Packer's daily common functions by modifying Django ORM to reduce number of SQL queries</p>
+                <p>Redesigned whole process of invoices settlement (Music Library Comparison, Generaing Invoices, Generating Regional Royalty Report... etc)</p>
+                <p>Improved Codecov percentage of Packer from 45% to 74% by rewriting whole test cases</p>
+                <p>Upgraded Django version of Packer from 1.7 to 1.10</p>
+                <p>Performed code reviews for technical designs, meeting the requirements and coding standards</p>
+                <p>Built SQL solutions for staff users using Metabase which is an open source BI Server</p>
+                <p>Built technical documentation (Onboarding doc, RD notes, coding style, ... etc) using Notion</p>
+                <p>Performed Git Flow in GitHub and ZenHub</p>
+                <p>Built development environment using Vagrant and Ansible</p>
+                <p>Helped to interview candidates</p>
+                <hr class="d-block d-sm-none">
+            </div>
+
+            <hr class="d-none d-sm-block">
+            <div class="col-md-4 period">
+                <h4>Gemini Open Cloud</h4>
+                <p>Sep. 2015 – May. 2017</p>
+            </div>
+            <div class="col-md-8 work_content">
+                <h4>Full-Time Senior Engineer</h4>
+                <p>Developed GOC (Gemini Open Cloud) Service Portal website using Django</p>
+                <p>Developed New GOC Platform website using Django</p>
+                <p>Developed BDaaS (Bistro) and DRaaS (SaaSaMe) Solution</p>
+                <p>Developed Hadoop Solution based on Openstack Sahara project</p>
+                <p>Developed WiSE Solution which provides service users to compile C++ source code files and execute compiled execution files</p>
+                <p>Owner of GOC Solution team’s GitHub Repository</p>
+                <hr class="d-block d-sm-none">
+            </div>
+
+            <hr class="d-none d-sm-block">
+            <div class="col-md-4 period">
+                <h4>Yang Ming Marine Transport Corporation</h4>
+                <p>July. 2013 – Aug. 2015</p>
+            </div>
+            <div class="col-md-8 work_content">
+                <h4>Full-Time Software Engineer</h4>
+                <p>Developed ASP.NET template project</p>
+                <p>Taught colleagues to develop ASP.NET projects</p>
+                <p>Enhanced and maintained internal systems</p>
+                <hr class="d-block d-sm-none">
+            </div>
+
+            <hr class="d-none d-sm-block">
+            <div class="col-md-4 period">
+                <h4>Ming Chuan University, Dept of CSIE</h4>
+                <p>Sep. 2009 – Jun. 2010</p>
+            </div>
+            <div class="col-md-8 work_content">
+                <h4>Part-Time Data Structure and Algorithm Teaching Assistant</h4>
+                <p>Assisted the professor with grades and tests proctoring</p>
+                <p>Helped students to solve problems for practicing coding</p>
+                <p>Built and maintained website for providing PowerCam files and sample codes, announcing grades, assigning homework</p>
+                <hr class="d-block d-sm-none">
+            </div>
+
+            <hr class="d-none d-sm-block">
+            <div class="col-md-4 period">
+                <h4>Ming Chuan University, Dept of CSIE</h4>
+                <p>Feb. 2009 – Jun. 2009</p>
+            </div>
+            <div class="col-md-8 work_content">
+                <h4>Part-Time Software Engineer</h4>
+                <p>Developed On-line Data Mining Classification System using ASP.NET</p>
+                <hr class="d-block d-sm-none">
+            </div>
+        </div> {# row #}
+    </fieldset>
+
+    {# projects #}
+    <fieldset>
+        <legend>Projects</legend>
+        <div class="row">
+            <div class="col-md-8">
+                <h4>dj-bootstrap-pagination</h4>
+                <p>dj-bootstrap-pagination is based on Django's core paginator module, and the pager is rendered using Bootstrap 3.x. But only Previous Page and Next Page is provided so far</p>
+            </div>
+            <div class="col-md-4">
+                <h4><a href="https://pypi.org/project/dj-bootstrap-pagination/" target="_blank">PyPI</a></h4>
+                <h4><a href="https://github.com/RobertH-W-Chiang/dj_bootstrap_pagination" target="_blank">GitHub</a></h4>
+            </div>
+        </div> {# row #}
+    </fieldset>
+
+    {# education #}
+    <fieldset>
+        <legend>Education</legend>
+        <div class="row">
+            <div class="col-md-8">
+                <h4>Ming Chuan University (MCU), Taiwan R.O.C., Master of Engineering</h4>
+                <p>Major: Computer Science and Information Engineering (CSIE)</p>
+            </div>
+            <div class="col-md-4 period">
+                <p>Sep. 2009 – Jun. 2011</p>
+                <hr class="d-block d-sm-none">
+            </div>
+
+            <hr class="d-none d-sm-block">
+            <div class="col-md-8">
+                <h4>Ming Chuan University (MCU), Taiwan R.O.C., Bachelor of Engineering</h4>
+                <p>Major: Computer Science and Information Engineering (CSIE)</p>
+            </div>
+            <div class="col-md-4 period">
+                <p>Sep. 2005 – Jun. 2009</p>
+                <hr class="d-block d-sm-none">
+            </div>
+        </div> {# row #}
+    </fieldset>
+
+    {# computer skills #}
+    <fieldset>
+        <legend>Computer Skills</legend>
+        <div class="row">
+            <div class="col-md-12">
+                <h4>ASP.NET, C++, C#, Django, MS SQL, Oracle, Oracle Form, Python</h4>
+            </div>
+        </div>
+    </fieldset>
+
+    {# publications #}
+    <fieldset>
+        <legend>Publications</legend>
+        <div class="row">
+            <div class="col-md-8">
+                <h4>Shyong Jian Shyu, <b><u>Hung-Wei Jiang</u></b>, “General Constructions for Threshold Multiple-secret Visual Cryptography Schemes,” <i>IEEE Transactions on Information Forensics & Security</i>, Vol. 8, No. 5, May, pp.733-743, 2013</h4>
+            </div>
+            <div class="col-md-4 pub_img_col">
+                <a href="http://ieeexplore.ieee.org/document/6472288/" target="_blank">
+                    <img src="{{ url_for('static', filename='img/resume/ieee_tifs.jpg') }}">
+                </a>
+                <hr class="d-block d-sm-none">
+            </div>
+        </div>
+
+        <hr class="d-none d-sm-block">
+        <div class="row">
+            <div class="col-md-8">
+                <h4>Shyong Jian Shyu, <b><u>Hung-Wei Jiang</u></b>, “Efficient Construction for Region Incrementing Visual Cryptography,” <i>IEEE Transactions on Circuits and Systems for Video Technology</i>, Vol. 22, Issue 5, May, pp. 769-777, 2012</h4>
+            </div>
+            <div class="col-md-4 pub_img_col">
+                <a href="http://ieeexplore.ieee.org/document/6111277/" target="_blank">
+                    <img src="{{ url_for('static', filename='img/resume/ieee_csvt.jpg') }}">
+                </a>
+                <hr class="d-block d-sm-none">
+            </div>
+        </div>
+
+        <hr class="d-none d-sm-block">
+        <div class="row">
+            <div class="col-md-12">
+                <h4><b><u>Hung-Wei, Jiang</u></b>, Shyong Jian, Shyu, “Enhanced Region Incrementing Visual Secret Sharing Scheme,” <i>International Conference on Information Technologies and Practices</i>, MCU, Taoyuan, 2011</h4>
+                <hr class="d-block d-sm-none">
+            </div>
+        </div>
+
+        <hr class="d-none d-sm-block">
+        <div class="row">
+            <div class="col-md-12">
+                <h4><b><u>Hung-Wei, Jiang</u></b>, Shyong Jian, Shyu, “Improved Visual Two Secret Sharing Scheme by Turning Operation,” <i>International Conference on Information Technologies and Practices</i>, MCU, Taoyuan, 2010</h4>
+                <hr class="d-block d-sm-none">
+            </div>
+        </div>
+
+        <hr class="d-none d-sm-block">
+        <div class="row">
+            <div class="col-md-12">
+                <h4>Yue-Shi Lee, Show-Jane Yen, <b><u>Hung-Wei Jiang</u></b>, Chih-Hsuan Lu, “The Study and Implementation of an On-line Data Mining Classification System,” <i>Taiwanese Association for Artificial Intelligence</i>, CYUT, Taichung, 2009</h4>
+                <hr class="d-block d-sm-none">
+            </div>
+        </div>
+    </fieldset>
+
+    {# honors and rewards #}
+    <fieldset>
+        <legend>Honors and Rewards</legend>
+        <div class="row">
+            <div class="col-md-8">
+                <h4>Third Place for Graduation Grade</h4>
+            </div>
+            <div class="col-md-4 period">
+                <p>2009</p>
+                <hr class="d-block d-sm-none">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8">
+                <h4>Excellent Performance on Graduation Topical Research Project</h4>
+            </div>
+            <div class="col-md-4 period">
+                <p>2009</p>
+                <hr class="d-block d-sm-none">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8">
+                <h4>First Place for Data Mining Competition of Dept. of CSIE in MCU</h4>
+            </div>
+            <div class="col-md-4 period">
+                <p>2008</p>
+                <hr class="d-block d-sm-none">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8">
+                <h4>First Place for Academic Grade</h4>
+            </div>
+            <div class="col-md-4 period">
+                <p>2005</p>
+                <hr class="d-block d-sm-none">
+            </div>
+        </div>
+    </fieldset>
+
+    {# leadership #}
+    <fieldset>
+        <legend>Leadership</legend>
+        <div class="row">
+            <div class="col-md-8">
+                <h4>Project Leader of Dept. of CSIE in MCU</h4>
+            </div>
+            <div class="col-md-4 period">
+                <p>Sep. 2007 – Jun. 2009</p>
+                <hr class="d-block d-sm-none">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8">
+                <h4>Club General Affairs of Dept. of CSIE in MCU</h4>
+            </div>
+            <div class="col-md-4 period">
+                <p>Sep. 2006 – Jun. 2007</p>
+                <hr class="d-block d-sm-none">
+            </div>
+        </div>
+    </fieldset>
+
+    {# language skills #}
+    <fieldset>
+        <legend>Language Skills</legend>
+        <div class="row">
+            <div class="col-md-12">
+                <h4>English: Medium (TOEIC: 615/990, Apr. 11, 2009)</h4>
+                <h4>Mandarin Chinese (Native Speaker)</h4>
+                <h4>Taiwanese (Advanced)</h4>
+            </div>
+        </div>
+    </fieldset>
+{% endblock content %}
