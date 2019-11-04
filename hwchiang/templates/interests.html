@@ -1,1 +1,37 @@
 {% extends "base.html" %}
+
+{% block css %}
+    <link href="{{ url_for('static', filename='css/interests.css') }}" rel="stylesheet">
+{% endblock css %}
+
+{% block content %}
+    {# photography #}
+    <fieldset>
+        <legend>Photography</legend>
+        <div class="row">
+            <div class="col-md-12">
+                <h4>Camera:</h4>
+                <p>Nikon D750</p>
+                <h4>Camera Lens:</h4>
+                <p>Nikon AF-S NIKKOR 35mm f1.8G ED</p>
+                <p>NIKON AF-S NIKKOR 24-120 mm f/4G ED VR</p>
+                <p><del>Nikon AF-S 18-35mm f/3.5-4.5G ED</del> <strong>(sold)</strong></p>
+                <p><del>TAMRON SP 90mm F/2.8 Di MACRO 1:1 VC USD (F004)</del> <strong>(sold)</strong></p>
+                <p>TAMRON SP 70-300mm F/4-5.6 Di VC USD (A005)</p>
+            </div>
+        </div>
+
+        <div class="row">
+            {% for photo in photos %}
+                <div class="col-md-4">
+                    <figure class="figure">
+                        <a href="{{ photo.href }}" target="_blank">
+                            <img class="figure-img img-fluid rounded" src="{{ url_for('static', filename='img/interests/photography/') }}{{ photo.filename }}">
+                            <figcaption class="figure-caption text-center">{{ photo.caption }}</figcaption>
+                        </a>
+                    </figure>
+                </div>
+            {% endfor %}
+        </div>
+    </fieldset>
+{% endblock content %}
