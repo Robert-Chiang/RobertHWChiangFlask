@@ -1,1 +1,1 @@
-web: gunicorn hwchiang/app:app
+web: gunicorn app:app
